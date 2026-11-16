@@ -33,7 +33,7 @@
 
 <section lang="en">
   <h2>Privacy Policy</h2>
-  <p class="meta">Effective date: 30 October 2026</p>
+  <p class="meta">Effective date: 16 November 2026</p>
   <p>Spendo is a personal expense tracker. This policy explains what information the Spendo app collects, how it is used, and the choices you have. Spendo is developed by Mahmoud Shehadeh ("we").</p>
 
   <h3>Information we collect</h3>
@@ -41,18 +41,21 @@
     <li><strong>Account information:</strong> your email address and a password, used to create your account and sign you in. Passwords are handled by our authentication provider and are never stored in readable form.</li>
     <li><strong>Financial records you enter:</strong> wallets, categories, expenses (amount, date, category, notes), monthly income, and the debts and savings you record. Spendo only knows what you type into it; it does not connect to your bank, cards or other accounts.</li>
     <li><strong>App preferences:</strong> language, theme and display settings. These stay on your device.</li>
+    <li><strong>Reminder delivery (only if you turn reminders on):</strong> a push token, an identifier for this installation of the app used only to deliver your reminders, and the times of the reminders you chose. Reminders sent this way never contain names or amounts.</li>
   </ul>
-  <p>Spendo does not collect your location, contacts, photos, device identifiers or advertising IDs, and it contains no advertising or analytics tools.</p>
+  <p>Spendo does not collect your location, contacts, photos or advertising IDs, and it contains no advertising or analytics tools.</p>
 
   <h3>How we use information</h3>
   <ul>
     <li>To provide the app: sign you in, show your records and keep them in sync across your devices.</li>
     <li>To send account emails you request, such as email confirmation and password reset.</li>
+    <li>To deliver the reminders you turned on, such as the daily logging reminder, even while the app is closed.</li>
   </ul>
   <p>We do not sell your information, use it for advertising, or share it with third parties for their own purposes.</p>
 
   <h3>Where your data is stored</h3>
   <p>Your records are saved on your device so the app works offline, and synced to our backend, hosted by Supabase, which provides our database and authentication. Data is sent over encrypted connections (HTTPS), and each account can only access its own records. Your sign-in session is kept in your device's secure storage.</p>
+  <p>Reminders are delivered through Expo's push service and Google's Firebase Cloud Messaging, which receive only the push token and the reminder's general wording. Turning reminders off stops them; signing out or deleting your account also removes the push token from our servers.</p>
 
   <h3>Data retention and deletion</h3>
   <p>We keep your data for as long as your account exists. You can delete your account at any time in the app under <em>Settings → Delete account</em>, or by following the steps on our <a href="delete-account.html">account deletion page</a>. Deleting your account permanently removes your account and all of its records from our servers. Data stored on your device is removed when you delete the account or uninstall the app.</p>
@@ -69,26 +72,29 @@
 
 <section lang="ar" dir="rtl">
   <h2>سياسة الخصوصية</h2>
-  <p class="meta">تاريخ السريان: 30 تشرين الأول 2026</p>
+  <p class="meta">تاريخ السريان: 16 تشرين الثاني 2026</p>
   <p>Spendo تطبيق لتتبّع المصاريف الشخصية. توضّح هذه السياسة المعلومات التي يجمعها التطبيق وكيف تُستخدم والخيارات المتاحة لك. يطوّر التطبيق محمود شحادة ("نحن").</p>
 
   <h3>المعلومات التي نجمعها</h3>
   <ul>
     <li><strong>معلومات الحساب:</strong> بريدك الإلكتروني وكلمة مرور، لإنشاء حسابك وتسجيل دخولك. يتولّى مزوّد المصادقة كلمات المرور ولا تُحفظ بشكل مقروء أبداً.</li>
-    <li><strong>السجلات المالية التي تدخلها:</strong> المحافظ والفئات والمصاريف (المبلغ والتاريخ والفئة والملاحظات) والدخل الشهري. لا يعرف التطبيق إلا ما تكتبه بنفسك، ولا يتصل بحسابك المصرفي أو بطاقاتك.</li>
+    <li><strong>السجلات المالية التي تدخلها:</strong> المحافظ والفئات والمصاريف (المبلغ والتاريخ والفئة والملاحظات) والدخل الشهري والديون والمدّخرات التي تسجّلها. لا يعرف التطبيق إلا ما تكتبه بنفسك، ولا يتصل بحسابك المصرفي أو بطاقاتك.</li>
     <li><strong>إعدادات التطبيق:</strong> اللغة والمظهر وإعدادات العرض، وتبقى على جهازك.</li>
+    <li><strong>إيصال التذكيرات (فقط إذا فعّلتها):</strong> رمز إشعارات (push token)، وهو معرّف لهذا التثبيت من التطبيق يُستخدم فقط لإيصال تذكيراتك، ومواعيد التذكيرات التي اخترتها. التذكيرات المرسلة بهذه الطريقة لا تحتوي أبداً على أسماء أو مبالغ.</li>
   </ul>
-  <p>لا يجمع Spendo موقعك أو جهات اتصالك أو صورك أو معرّفات جهازك أو معرّفات الإعلانات، ولا يحتوي على أي أدوات إعلانات أو تحليلات.</p>
+  <p>لا يجمع Spendo موقعك أو جهات اتصالك أو صورك أو معرّفات الإعلانات، ولا يحتوي على أي أدوات إعلانات أو تحليلات.</p>
 
   <h3>كيف نستخدم المعلومات</h3>
   <ul>
     <li>لتشغيل التطبيق: تسجيل دخولك وعرض سجلاتك ومزامنتها بين أجهزتك.</li>
     <li>لإرسال رسائل الحساب التي تطلبها، مثل تأكيد البريد وإعادة تعيين كلمة المرور.</li>
+    <li>لإيصال التذكيرات التي فعّلتها، مثل تذكير التسجيل اليومي، حتى والتطبيق مغلق.</li>
   </ul>
   <p>لا نبيع معلوماتك ولا نستخدمها للإعلانات ولا نشاركها مع أي طرف ثالث لأغراضه الخاصة.</p>
 
   <h3>أين تُحفظ بياناتك</h3>
   <p>تُحفظ سجلاتك على جهازك ليعمل التطبيق بدون إنترنت، وتُزامَن مع خوادمنا المستضافة لدى Supabase التي توفّر قاعدة البيانات والمصادقة. تُنقل البيانات عبر اتصال مشفّر (HTTPS)، ولا يمكن لأي حساب الوصول إلا إلى سجلاته. تُحفظ جلسة دخولك في التخزين الآمن على جهازك.</p>
+  <p>تصل التذكيرات عبر خدمة الإشعارات من Expo وخدمة Firebase Cloud Messaging من Google، ولا تتلقّيان إلا رمز الإشعارات والصياغة العامة للتذكير. إيقاف التذكيرات يوقفها، وتسجيل الخروج أو حذف الحساب يحذف أيضاً رمز الإشعارات من خوادمنا.</p>
 
   <h3>الاحتفاظ بالبيانات وحذفها</h3>
   <p>نحتفظ ببياناتك طالما حسابك موجود. يمكنك حذف حسابك في أي وقت من التطبيق عبر <em>الإعدادات ← حذف الحساب</em>، أو باتباع الخطوات في <a href="delete-account.html">صفحة حذف الحساب</a>. حذف الحساب يزيل حسابك وكل سجلاته نهائياً من خوادمنا، وتُزال البيانات المحفوظة على جهازك عند حذف الحساب أو إزالة التطبيق.</p>
